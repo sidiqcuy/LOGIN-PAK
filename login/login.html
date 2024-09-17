@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        main{
+            text-align: center;
+            position: relative;
+            top: 14rem;
+        }
+
+        .error{
+            color: rgb(248, 105, 105);
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <h2>Login</h2>
+    <form action="">
+    <p id="errormsg" class="error"></p>
+    <input type="text" placeholder="Username" id="usn"><br>
+    <input type="password" placeholder="Password" id="pw"><br>
+    <input type="button" value="Login" id="tbl">
+    </form>
+    </main>
+
+    <script>
+        const tbl = document.querySelector("#tbl")
+        const pw = document.querySelector("#pw")
+        const usn = document.querySelector("#usn")
+        const ermsg = document.querySelector("#errormsg")
+
+        tbl.addEventListener("click", function(){
+            if(usn.value == "Sigma" && pw.value == "Skibidi"){
+                window.location = "index.html";
+            }
+
+            else{
+                ermsg.textContent = 'Kurang sigma anda, ulang lagi coba'
+            }
+        })
+    </script>
+</body>
+</html>
